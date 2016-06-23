@@ -12,7 +12,7 @@ This was made on a linux box, using BASH & Python. There are a few prerequisites
 
 After that , edit StT.sh to add your own Google Speech API Key, and change the spoken language setting (lines 63 & 66)
 
-Then run "python CleverVoice.py", and it should automagically work.
+Then run "python CleverVoicePOC.py", and it should automagically work.
 If it doesn't, make sure StT.sh is set to be excutable ("chmod +x StT.sh" in the terminal)
 If it still doesn't work, tell me!
 

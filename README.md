@@ -16,4 +16,7 @@ Then run "python CleverVoicePOC.py", and it should automagically work.
 If it doesn't, make sure StT.sh is set to be excutable ("chmod +x StT.sh" in the terminal)
 If it still doesn't work, tell me!
 
+When you've had enough nonsense discussion, just say "goodbye"
+
+
 Peace, Category

@@ -33,9 +33,10 @@ from cleverbot import Cleverbot
 # Initialize Cleverbot
 ChatBot = Cleverbot()
 
+Running = True
 
 # Loop for 10 questions/responses - upgrade to continuous while loop, magic word to exit?
-for x in range(0, 10):
+while Running == True:
 	# Get voice input - GOOGLE MAGIC
 	subprocess.call("./StT.sh")
 	
@@ -43,6 +44,10 @@ for x in range(0, 10):
 	question = open("question.txt").read()
 	print "Q: %s" % question
 	
+	# Check if user wants to quit
+	if "goodbye" in question:
+		Running = False
+		
 	# Send to Cleverbot, and get response
 	response = ChatBot.ask(question)
 	print "A: %s" % response
@@ -54,5 +59,5 @@ for x in range(0, 10):
 	# Speak response aloud
 	subprocess.call(["festival", "--tts", "response.txt"])
 
-
+print "Thanks for chatting to CleverVoice"
 

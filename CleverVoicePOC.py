@@ -50,6 +50,7 @@ while Running == True:
 		
 	# Send to Cleverbot, and get response
 	response = ChatBot.ask(question)
+	response = response.encode('utf-8')
 	print "A: %s" % response
 	
 	# Save response to text file

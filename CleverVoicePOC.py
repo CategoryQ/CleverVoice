@@ -20,7 +20,7 @@
 # rotary phone, so there is always someone to talk to...
 #
 #
-# Copyright 2016 Category <categoryNOSPAM@quintendo.uk>
+# Copyright (c) 2016 Category <categoryNOSPAM@quintendo.uk>
 # This work is free. You can redistribute it and/or modify it under the
 # terms of the Do What The Fuck You Want To Public License, Version 2,
 # as published by Sam Hocevar. See the COPYING file for more details.
@@ -33,9 +33,11 @@ from cleverbot import Cleverbot
 # Initialize Cleverbot
 ChatBot = Cleverbot()
 
+# Setup Variables
 Running = True
 
-# Loop for 10 questions/responses - upgrade to continuous while loop, magic word to exit?
+
+# Main loop
 while Running == True:
 	# Get voice input - GOOGLE MAGIC
 	subprocess.call("./StT.sh")
@@ -48,7 +50,7 @@ while Running == True:
 	if "goodbye" in question:
 		Running = False
 		
-	# Send to Cleverbot, and get response
+	# Send to Cleverbot, and get response in ASCII
 	response = ChatBot.ask(question)
 	response = response.encode('utf-8')
 	print "A: %s" % response

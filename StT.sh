@@ -60,7 +60,7 @@
 #############
 
 # Self explanatory, look elsewhere for how to get your own
-GoogleSpeechAPIKey="INSERT KEY BETWEEN QUOTES"
+GoogleSpeechAPIKey="insert google speech API key here"
 
 # Voice language of user, in standard ISO 639-1 format
 VoiceLang="en_UK"
